@@ -1,0 +1,20 @@
+# ベースイメージとしてNode.jsの公式イメージを使用
+FROM node:18-alpine
+
+# 作業ディレクトリを設定
+WORKDIR /usr/src/app
+
+# package.jsonとpackage-lock.jsonをコピー
+# COPY ../../backend/package*.json ./
+
+# アプリケーションのソースコードをコピー
+COPY ../../backend .
+
+# 依存関係をインストール
+RUN npm install
+
+# NestJSが使用するポートを公開
+EXPOSE 3001
+
+# 開発サーバーを起動（ホットリロード有効）
+CMD ["npm", "run", "start:dev"]
