@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/frontend/Dockerfile
-    container_name: next-nest-app
+    container_name: next-nest-frontend
     ports:
       - "3000:3000"
     volumes:
@@ -18,7 +18,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/backend/Dockerfile
-    container_name: next-nest-app
+    container_name: next-nest-backend
     ports:
       - "3001:3001"
       - "5555:5555"
