@@ -5,13 +5,13 @@ FROM node:18-alpine
 WORKDIR /usr/src/app
 
 # package.jsonとpackage-lock.jsonをコピー
-# COPY ../../frontend/package*.json ./
-
-# アプリケーションのソースコードをコピー
-COPY ../../frontend .
+COPY ../../frontend/package*.json ./
 
 # 依存関係をインストール
 RUN npm install
+
+# アプリケーションのソースコードをコピー
+COPY ../../frontend .
 
 # Next.jsが使用するポートを公開
 EXPOSE 3000

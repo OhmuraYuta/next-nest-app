@@ -5,13 +5,13 @@ FROM node:18-alpine
 WORKDIR /usr/src/app
 
 # package.jsonとpackage-lock.jsonをコピー
-# COPY ../../backend/package*.json ./
-
-# アプリケーションのソースコードをコピー
-COPY ../../backend .
+COPY ../../backend/package*.json ./
 
 # 依存関係をインストール
 RUN npm install
+
+# アプリケーションのソースコードをコピー
+COPY ../../backend .
 
 # NestJSが使用するポートを公開
 EXPOSE 3001
