@@ -4,6 +4,8 @@ FROM node:18-alpine
 # 作業ディレクトリを設定
 WORKDIR /usr/src/app
 
+RUN npm i -g @nestjs/cli
+
 # package.jsonとpackage-lock.jsonをコピー
 COPY ../../backend/package*.json ./
 
