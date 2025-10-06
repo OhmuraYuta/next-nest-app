@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/frontend/Dockerfile
-    container_name: vantan-sns-frontend
+    container_name: next-nest-app
     ports:
       - "3000:3000"
     volumes:
@@ -18,7 +18,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/backend/Dockerfile
-    container_name: vantan-sns-backend
+    container_name: next-nest-app
     ports:
       - "3001:3001"
     volumes:
