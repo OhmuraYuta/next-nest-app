@@ -26,5 +26,5 @@ services:
       - /usr/src/app/node_modules
     environment:
       - WATCHPACK_POLLING=true
-    command: npm run start:dev -- --preserveWatchOutput
+    # command: npm run start:dev -- --preserveWatchOutput
     tty: true
