@@ -1,3 +1,4 @@
+// src/todos/todos.service.ts
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { CreateTodoDto } from './dto/create-todo.dto';
@@ -24,6 +25,6 @@ export class TodosService {
   }
 
   remove(id: number) {
-    return this.prisma.todo.delete({ where: { id }});
+    return this.prisma.todo.delete({ where: { id } });
   }
 }
