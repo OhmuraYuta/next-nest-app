@@ -1,5 +1,5 @@
 # ベースイメージとしてNode.jsの公式イメージを使用
-FROM node:18-alpine
+FROM node:lts-alpine
 
 # 作業ディレクトリを設定
 WORKDIR /usr/src/app
